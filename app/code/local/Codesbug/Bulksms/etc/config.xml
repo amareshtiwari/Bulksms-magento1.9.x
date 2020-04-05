@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* @category   Codesbug
+* @package    Codesbug_Bulksms
+* @author     ModuleCreator
+* @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Codesbug_Bulksms>
+            <version>0.1.0</version>
+        </Codesbug_Bulksms>
+    </modules>
+    <frontend>
+        <routers>
+            <bulksms>
+                <use>standard</use>
+                <args>
+                    <module>Codesbug_Bulksms</module>
+                    <frontName>bulksms</frontName>
+                </args>
+            </bulksms>
+        </routers>
+        <layout>
+            <updates>
+                <bulksms>
+                    <file>bulksms.xml</file>
+                </bulksms>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <bulksms>
+                <use>admin</use>
+                <args>
+                    <module>Codesbug_Bulksms</module>
+                    <frontName>bulksms</frontName>
+                </args>
+            </bulksms>
+        </routers>
+    </admin>
+    <adminhtml>
+      
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Codesbug_Bulksms>
+                            <title>Bulksms Module</title>
+                            <sort_order>10</sort_order>
+                        </Codesbug_Bulksms>
+                        		
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <bulksmssection translate="title" module="bulksms">
+                                            <title>Bulksms Section ACL</title>
+                                            <sort_order>99</sort_order>
+                                        </bulksmssection>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <bulksms>
+                    <file>bulksms.xml</file>
+                </bulksms>
+            </updates>
+        </layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <bulksms>
+                <class>Codesbug_Bulksms_Model</class>
+                <resourceModel>bulksms_mysql4</resourceModel>
+            </bulksms>
+            <bulksms_mysql4>
+                <class>Codesbug_Bulksms_Model_Mysql4</class>
+                <entities>
+                    <bulksms>
+                        <table>bulksms</table>
+                    </bulksms>
+                </entities>
+            </bulksms_mysql4>
+        </models>
+        <resources>
+            <bulksms_setup>
+                <setup>
+                    <module>Codesbug_Bulksms</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bulksms_setup>
+            <bulksms_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bulksms_write>
+            <bulksms_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bulksms_read>
+        </resources>
+        <blocks>
+            <bulksms>
+                <class>Codesbug_Bulksms_Block</class>
+            </bulksms>
+        </blocks>
+        <helpers>
+            <bulksms>
+                <class>Codesbug_Bulksms_Helper</class>
+            </bulksms>
+        </helpers>
+    </global>
+</config>

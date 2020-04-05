@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Codesbug_Bulksms</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="https://opensource.org/licenses/OSL-3.0">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>You can use Bulksms module for sending SMS notification service.</summary>
+    <description>You can use Bulksms module for sending SMS notification service.</description>
+    <notes>First release</notes>
+    <authors><author><name>Amaresh Tiwari</name><user>amareshtiwari</user><email>codesbug@gmail.com</email></author></authors>
+    <date>2020-04-05</date>
+    <time>10:50:01</time>
+    <contents><target name="magelocal"><dir name="Codesbug"><dir name="Bulksms"><dir name="Helper"><file name="Data.php" hash="efe6a1dbb6cdcbf24f1a865d19d59639"/></dir><dir name="Model"><file name="Bulksms.php" hash="b0c4250890bc4d5867a610240723715f"/></dir><dir name="etc"><file name="config.xml" hash="051eb9481e64cb794cb756e6809068b4"/><file name="system.xml" hash="8310148d32539fb19745ef40efbafa06"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Codesbug_Bulksms.xml" hash="5c850a5fa0810193dbe95a7c52f5b766"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
